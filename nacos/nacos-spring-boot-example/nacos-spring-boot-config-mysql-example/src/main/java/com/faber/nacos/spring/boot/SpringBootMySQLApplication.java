@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @NacosPropertySource(dataId = "mysql.properties", autoRefreshed = true)
+//@NacosPropertySource(dataId = "mysql.yaml", autoRefreshed = true)
 public class SpringBootMySQLApplication {
 
     public static void main(String[] args) {
