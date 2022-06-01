@@ -30,3 +30,11 @@ spring:
 ```
 2. 在APP中加入注解：@NacosPropertySource(dataId = "mysql.yaml")
 3. 启动APP会报错，未找到原因
+
+# 关于升级nacos版本
+## 测试升级到0.2.10版本
+测试升级到0.2.10版本，启动会报错，找到如下issue，发现nacos不支持spring boot 2.4.x+版本
+
+[升级Spring 2.4.1 ConfigurationBeanFactoryMetadata 找不到 #4554](https://github.com/alibaba/nacos/issues/4554)
+
+## 升级到0.2.11-beta版本解决上述问题
