@@ -14,3 +14,19 @@ spring.jpa.hibernate.ddl-auto= create
 2. 配置完成后启动app
 
 > 使用nacos的yaml文件配置会莫名其妙的读不到配置文件，目前还未找到问题所在。
+
+### mysql.yaml
+1. 在nacos中配置名为`mysql.yaml`的配置文件，内容如下
+```yaml
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/nacos_test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+  jpa:
+    hibernate:
+      ddl-auto: create
+```
+2. 在APP中加入注解：@NacosPropertySource(dataId = "mysql.yaml")
+3. 启动APP会报错，未找到原因
