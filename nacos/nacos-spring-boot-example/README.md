@@ -38,3 +38,6 @@ spring:
 [升级Spring 2.4.1 ConfigurationBeanFactoryMetadata 找不到 #4554](https://github.com/alibaba/nacos/issues/4554)
 
 ## 升级到0.2.11-beta版本解决上述问题
+
+## 结论
+nacos对spring boot 2.4+ 版本支持不好，目前不建议升级。
